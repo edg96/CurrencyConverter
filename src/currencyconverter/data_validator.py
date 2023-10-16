@@ -36,7 +36,36 @@ class InvalidNameException(Exception):
         super().__init__('Invalid name')
 
 
-class ExcelDetails(ctk.CTkToplevel):
+class DataValidator(ctk.CTkToplevel):
+    """
+    The DataValidator class is responsible for providing a GUI interface for the user where the
+    providing details must be checked and validated in order for the Windows operating system to
+    save the file.
+
+    Attributes:
+        currency_widgets (list[ctk.CTkLabel]): A list of currency widgets from the main window.
+
+        value_widgets (list[ctk.CTkFrame]): A list of value entries from the main window.
+        currencies.
+
+        self.title (str): The title of the application.
+
+        self.geometry (str): The window size in height and width.
+
+        self.resizable (bool, bool): A tuple of two booleans responsible for blocking the window to
+        not be resizable both by height or width.
+
+        self.configure(bg='#222629'): The background color of the window application.
+
+        self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().
+        parent.parent.parent, 'resources', 'CurrencyConverter.ico'))): Sets the window icon to the
+        specified image after 250 milliseconds (CustomTkinter has a bug where a delay should be
+        placed in order for the icon to load and be dispalyed: can't provide the lowest delay acceptable).
+
+    Note:
+    - The DataValidator class also provide the option to save the data to a CSV file if the checks
+    pass and the details are valid.
+    """
     def __init__(self, currency_widgets, value_widgets):
         super().__init__()
         self.currency_widgets = currency_widgets
@@ -45,7 +74,6 @@ class ExcelDetails(ctk.CTkToplevel):
         self.geometry('300x185')
         self.resizable(False, False)
         self.configure(bg='#222629')
-        self.operation_unique_identifier = 'Currency'
         self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().parent.parent.parent,
                                                              'resources', 'Save.ico')))
 
@@ -94,7 +122,7 @@ class ExcelDetails(ctk.CTkToplevel):
 
     @staticmethod
     def save_to_excel(saving_location: str, excel_name: str, currency_widgets: list[ctk.CTkLabel],
-                      value_widgets: list[ctk.CTkEntry]):
+                      value_widgets: list[ctk.CTkEntry]) -> None:
         """
         Save currency conversion details to an Excel file.
 

@@ -5,7 +5,7 @@ from pathlib import Path
 import customtkinter as ctk
 
 from src.currencyconverter.currency_converter import CurrencyConvertor
-from src.currencyconverter.save_excel_details import ExcelDetails
+from src.currencyconverter.data_validator import DataValidator
 
 
 """
@@ -26,18 +26,57 @@ Note:
 
 
 class CurrencyConverterWindow(ctk.CTk):
+    """
+    The CurrencyConverterWindow is the main window of the application, containing the currency details
+    and the options of saving the currency data (the results) or clearing the data (which act as a
+    reset where USD is the currency reference).
+
+    Attributes:
+        self.title (str): The title of the application.
+
+        self.geometry (str): The window size in height and width.
+
+        self.resizable (bool, bool): A tuple of two booleans responsible for blocking the window to
+        not be resizable both by height or width.
+
+        self.configure(bg='#222629'): The background color of the window application.
+
+        self.radio_current_option (int): An integer representing the current selected radio option.
+
+        self.dropdown_current_option (str): A string representing the current selected dropdown option.
+
+        self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().
+        parent.parent.parent, 'resources', 'CurrencyConverter.ico'))): Sets the window icon to the
+        specified image after 250 milliseconds (CustomTkinter has a bug where a delay should be
+        placed in order for the icon to load and be dispalyed: can't provide the lowest delay acceptable).
+
+        self.currency_converter (CurrencyConvertor): An instance of the CurrencyConvertor class with
+        'USD' as the initial currency reference.
+
+        self.toplevel_window (ExcelDetails or None): A reference to the ExcelDetails window for saving
+        currency details or None if it doesn't exist.
+
+        self.index (int): An index used for tracking continents.
+
+        self.currency_widgets (list[ctk.CTkLabel]): A list of currency label widgets.
+
+        self.value_widgets (list[ctk.CTkEntry]): A list of value entry widgets.
+
+    Notes:
+    - An initial instance of CurrencyConverter should be provided with a specified currency refernce
+    (chose USD for convince and international usage)
+    """
     def __init__(self):
         super().__init__()
         self.title(' Currency Converter')
         self.geometry('1014x660')
         self.resizable(False, False)
         self.configure(bg='#222629')
-        self.operation_unique_identifier = 'Currency'
-        self.radio_current_option = 0
-        self.dropdown_current_option = ''
         self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().parent.parent.parent,
                    'resources', 'CurrencyConverter.ico')))
         self.currency_converter = CurrencyConvertor('USD')
+        self.radio_current_option = 0
+        self.dropdown_current_option = ''
         self.toplevel_window = None
         self.index = 0
         self.currency_widgets = []
@@ -144,6 +183,6 @@ class CurrencyConverterWindow(ctk.CTk):
             value_widgets (list[ctk.CTkEntry]): List of value entry widgets.
         """
         if self.toplevel_window is None or not self.toplevel_window.winfo_exists():
-            self.toplevel_window = ExcelDetails(currency_widgets, value_widgets)
+            self.toplevel_window = DataValidator(currency_widgets, value_widgets)
         else:
             self.toplevel_window.focus()
