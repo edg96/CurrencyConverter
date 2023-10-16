@@ -60,7 +60,7 @@ class DataValidator(ctk.CTkToplevel):
         self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().
         parent.parent.parent, 'resources', 'CurrencyConverter.ico'))): Sets the window icon to the
         specified image after 250 milliseconds (CustomTkinter has a bug where a delay should be
-        placed in order for the icon to load and be dispalyed: can't provide the lowest delay acceptable).
+        placed in order for the icon to load and be displayed: can't provide the lowest delay acceptable).
 
     Note:
     - The DataValidator class also provide the option to save the data to a CSV file if the checks

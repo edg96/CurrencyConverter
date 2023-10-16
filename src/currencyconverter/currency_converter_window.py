@@ -48,7 +48,7 @@ class CurrencyConverterWindow(ctk.CTk):
         self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().
         parent.parent.parent, 'resources', 'CurrencyConverter.ico'))): Sets the window icon to the
         specified image after 250 milliseconds (CustomTkinter has a bug where a delay should be
-        placed in order for the icon to load and be dispalyed: can't provide the lowest delay acceptable).
+        placed in order for the icon to load and be displayed: can't provide the lowest delay acceptable).
 
         self.currency_converter (CurrencyConvertor): An instance of the CurrencyConvertor class with
         'USD' as the initial currency reference.
@@ -63,7 +63,7 @@ class CurrencyConverterWindow(ctk.CTk):
         self.value_widgets (list[ctk.CTkEntry]): A list of value entry widgets.
 
     Notes:
-    - An initial instance of CurrencyConverter should be provided with a specified currency refernce
+    - An initial instance of CurrencyConverter should be provided with a specified currency reference
     (chose USD for convince and international usage)
     """
     def __init__(self):
