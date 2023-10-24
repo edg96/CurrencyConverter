@@ -14,14 +14,15 @@ from src.currencyconverter.data_validator import DataValidator
 The application allows users to convert currency values and save the converted data to an Excel file.
 
 Classes (all defined externally):
-- CurrencyConverterWindow: The main application window, responsible for currency conversion and display.
-- ExcelDetails: A class responsible for saving currency details to an Excel file.
+    - CurrencyConverterWindow: The main application window, responsible for currency conversion and 
+    display.
+    - ExcelDetails: A class responsible for saving currency details to an Excel file.
 
 Usage:
-- Instantiate the CurrencyConverterWindow class to launch the currency conversion application.
+    - Instantiate the CurrencyConverterWindow class to launch the currency conversion application.
 
 Note:
-- This script uses the external library 'customtkinter' for creating a GUI interface.
+    - This script uses the external library 'customtkinter' for creating a GUI interface.
 """
 
 
@@ -63,8 +64,8 @@ class CurrencyConverterWindow(ctk.CTk):
         self.value_widgets (list[ctk.CTkEntry]): A list of value entry widgets.
 
     Notes:
-    - An initial instance of CurrencyConverter should be provided with a specified currency reference
-    (chose USD for convince and international usage)
+        - An initial instance of CurrencyConverter should be provided with a specified currency
+        reference (chose USD for convince and international usage)
     """
     def __init__(self):
         super().__init__()

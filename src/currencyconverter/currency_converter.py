@@ -28,7 +28,7 @@ class CurrencyConvertor:
         continent.
 
     Note:
-    - The collected data can be saved and stored into an Excel file for later usage and analysis.
+        - The collected data can be saved and stored into an Excel file for later usage and analysis.
     """
     def __init__(self, currency_for_reference):
         self.currency_for_reference = currency_for_reference

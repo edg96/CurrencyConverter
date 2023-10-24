@@ -63,8 +63,8 @@ class DataValidator(ctk.CTkToplevel):
         placed in order for the icon to load and be displayed: can't provide the lowest delay acceptable).
 
     Note:
-    - The DataValidator class also provide the option to save the data to a CSV file if the checks
-    pass and the details are valid.
+        - The DataValidator class also provide the option to save the data to a CSV file if the checks
+        pass and the details are valid.
     """
     def __init__(self, currency_widgets, value_widgets):
         super().__init__()

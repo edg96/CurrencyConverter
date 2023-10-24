@@ -30,7 +30,7 @@ def read_from_file_by_line(file_path: str, mode: str = 'r') -> list[str]:
         list[str]: A list of strings where each string represents a line from the file.
 
     Note:
-    - If the file is not found, a message is printed to the console, and an empty list is returned.
+        - If the file is not found, a message is printed to the console, and an empty list is returned.
     """
     try:
         with open(file_path, mode) as file:

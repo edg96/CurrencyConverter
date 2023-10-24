@@ -16,7 +16,7 @@ class ExcelConverter:
         _value_widgets (list[ctk.CTkEntry]): A list of value entry widgets.
 
     Note:
-    - The class is saving the data into a CSV file type.
+        - The class is saving the data into a CSV file type.
     """
     def __init__(self, saving_location: str, excel_name: str, currency_widgets: list[ctk.CTkLabel],
                  value_widgets: list[ctk.CTkEntry]):
