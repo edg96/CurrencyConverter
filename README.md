@@ -25,7 +25,7 @@ Currency Converter is a Python application that allows you to quickly and easily
 
 ## YouTube Presentation
 
-[![Watch the video](https://img.youtube.com/vi/kwWJcXiFFos/hqdefault.jpg)](https://youtu.be/kwWJcXiFFos?si=eM-IfuI7DZh7t31L)
+[![Watch the video](https://img.youtube.com/vi/WRO8aIbTuvQ/hqdefault.jpg)](https://youtu.be/WRO8aIbTuvQ?si=Bc11zzeJ3P4pcCkw)
 
 ## Features
 
