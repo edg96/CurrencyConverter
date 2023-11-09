@@ -74,7 +74,7 @@ class CurrencyConverterWindow(ctk.CTk):
         self.resizable(False, False)
         self.configure(bg='#222629')
         self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().parent.parent.parent,
-                   'resources', 'CurrencyConverter.ico')))
+                   'resources', 'icons', 'CurrencyConverter.ico')))
         self.currency_converter = CurrencyConvertor('USD')
         self.radio_current_option = 0
         self.dropdown_current_option = ''

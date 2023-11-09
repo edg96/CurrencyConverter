@@ -75,7 +75,7 @@ class DataValidator(ctk.CTkToplevel):
         self.resizable(False, False)
         self.configure(bg='#222629')
         self.after(250, lambda: self.iconbitmap(os.path.join(Path(__file__).resolve().parent.parent.parent,
-                                                             'resources', 'Save.ico')))
+                                                             'resources', 'icons', 'Save.ico')))
 
         self.save_location_entry = ctk.CTkEntry(master=self, placeholder_text='Insert the saving location',
                                                 width=280, font=('Halvica', 14, 'bold'))

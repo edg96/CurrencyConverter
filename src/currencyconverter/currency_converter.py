@@ -35,7 +35,7 @@ class CurrencyConvertor:
         self.exchange_rates = {}
         self.url = default_url
         self.currencies_resource = os.path.join(pathlib.Path(__file__).resolve().parent.parent.parent,
-                                                'resources', 'currency_per_category')
+                                                'resources', 'files', 'currency_per_category')
         self.exchange_rates = {}
         self.continents = []
         self.continents_and_currencies = []

@@ -16,14 +16,4 @@ __all__ = []
 
 if __name__ == '__main__':
     currencyconverter = CurrencyConverterWindow()
-    print(f'Author: {__author__}')
-    print(f'Copyright: {__copyright__}')
-    print(f'Credits: {__credits__}')
-
-    print(f'License: {__license__}')
-    print(f'Version: {__version__}')
-    print(f'Maintainer: {__maintainer__}')
-    print(f'Email: {__email__}')
-    print(f'Status: {__status__}')
-
     currencyconverter.mainloop()
