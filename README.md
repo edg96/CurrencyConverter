@@ -47,7 +47,7 @@ To use CurrencyConverter, follow these steps:
 - Custom Tkinter
 - Beautiful Soup
 
-Note: The project is developed using 'Python 3.12.0'
+Note: The project is developed using 'Python 3.11.3'
 
 ## Installation Guide
 
