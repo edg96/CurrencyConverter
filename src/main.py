@@ -1,4 +1,4 @@
-from src.currencyconverter.currency_converter_window import CurrencyConverterWindow
+from currencyconverter.currency_converter_window import CurrencyConverterWindow
 
 
 __author__ = 'Dragos-Gabriel Enache'

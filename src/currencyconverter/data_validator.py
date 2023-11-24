@@ -5,8 +5,8 @@ from pathlib import Path
 
 import customtkinter as ctk
 
-from src.currencyconverter.excel_converter import ExcelConverter
-from src.currencyconverter.auxiliar import browse_folder
+from currencyconverter.excel_converter import ExcelConverter
+from currencyconverter.auxiliar import browse_folder
 
 
 class InvalidLocationException(Exception):

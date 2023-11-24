@@ -1,3 +1,10 @@
-# Default ignored files
-/.idea/
+# General
+/.venv/
 /src/currencyconverter/__pycache__/
+
+# IDE Specific folder/ files
+# For PyCharm users
+/.idea/
+
+# For Visual Studio Code users
+.vscode

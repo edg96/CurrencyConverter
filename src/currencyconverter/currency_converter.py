@@ -4,7 +4,7 @@ import pathlib
 import requests
 
 from bs4 import BeautifulSoup
-from src.currencyconverter.auxiliar import read_from_file_by_line
+from currencyconverter.auxiliar import read_from_file_by_line
 
 
 default_url = "https://www.cursbnr.ro/"

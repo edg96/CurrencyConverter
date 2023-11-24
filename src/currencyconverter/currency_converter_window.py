@@ -4,8 +4,8 @@ from pathlib import Path
 
 import customtkinter as ctk
 
-from src.currencyconverter.currency_converter import CurrencyConvertor
-from src.currencyconverter.data_validator import DataValidator
+from currencyconverter.currency_converter import CurrencyConvertor
+from currencyconverter.data_validator import DataValidator
 
 
 """
