@@ -32,6 +32,7 @@ def read_from_file_by_line(file_path: str, mode: str = 'r') -> list[str]:
     Note:
         - If the file is not found, a message is printed to the console, and an empty list is returned.
     """
+    file_content = []  # Initialize file_content with an empty list
     try:
         with open(file_path, mode) as file:
             file_content = file.read().splitlines()

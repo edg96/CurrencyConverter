@@ -1,6 +1,7 @@
 # General
 /.venv/
 /src/currencyconverter/__pycache__/
+/tests/currencyconverter/__pycache__/
 
 # IDE Specific folder/ files
 # For PyCharm users

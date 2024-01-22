@@ -4,10 +4,10 @@ import pathlib
 import requests
 
 from bs4 import BeautifulSoup
-from currencyconverter.auxiliar import read_from_file_by_line
+from src.currencyconverter.auxiliar import read_from_file_by_line
 
 
-default_url = "https://www.cursbnr.ro/"
+DEFAULT_URL = "https://www.cursbnr.ro/"
 
 
 class CurrencyConvertor:
@@ -33,7 +33,7 @@ class CurrencyConvertor:
     def __init__(self, currency_for_reference):
         self.currency_for_reference = currency_for_reference
         self.exchange_rates = {}
-        self.url = default_url
+        self.url = DEFAULT_URL
         self.currencies_resource = os.path.join(pathlib.Path(__file__).resolve().parent.parent.parent,
                                                 'resources', 'files', 'currency_per_category')
         self.exchange_rates = {}
